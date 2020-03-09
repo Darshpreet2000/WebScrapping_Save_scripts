@@ -18,7 +18,6 @@ folder = os.path.basename(here)
 folder = os.path.basename(here)
 latest = '%s/latest' % here
 year = datetime.datetime.today().year
-
 output_data = os.path.join(here, 'data-latest.csv')
 
 # Don't continue if we don't have latest folder
@@ -37,7 +36,8 @@ with open(results_json, 'r') as filey:
 
 columns = ['price', 
            'description',
-           'charge_type'
+           'charge_type',
+           'DateUpdated'
            ]
 
 today = datetime.datetime.today().strftime('%Y-%m-%d')
@@ -70,7 +70,8 @@ for result in results:
                 entry = [                         # charge code
                          price,                        # price
                          row[1]['BILLING_DESC']
-                        ,'standard']            
+                        ,'standard',
+                        today]            
                 df.loc[idx,:] = entry
 
 
@@ -83,7 +84,8 @@ for result in results:
                 price = row[1]['Average (Mean) Charges Per Discharge']
                 entry = [price, # price
                          row[1]['MSDRG'],
-                         'standard'
+                         'standard',
+                         today
                         ]            
                 df.loc[idx,:] = entry
 

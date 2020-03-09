@@ -10,7 +10,8 @@ here = os.path.dirname(os.path.abspath(__file__))
 folder = os.path.basename(here)
 latest = '%s/latest' % here
 year = datetime.datetime.today().year
-output_data = os.path.join(here, 'data-latest.tsv')
+today = datetime.datetime.today().strftime('%Y-%m-%d')
+output_data = os.path.join(here, 'data-latest.csv')
 
 # Don't continue if we don't have latest folder
 if not os.path.exists(latest):
@@ -29,7 +30,8 @@ with open(results_json, 'r') as filey:
 columns = [
            'price', 
            'description',
-           'charge_type']
+           'charge_type',
+            'DateUpdated']
 
 df = pandas.DataFrame(columns=columns)
 
@@ -68,7 +70,8 @@ for result in results:
             entry = [        # charge code
                      price, # price
                      row[1]['MSDRG Description'],
-                     charge_type]
+                     charge_type,
+                     today]
             df.loc[idx,:] = entry
 
     else:
@@ -80,7 +83,8 @@ for result in results:
             entry = [                 # charge code
                      price,                # price
                      row[1]['Description - UPPERCASE'], 
-                     charge_type]
+                     charge_type,
+                     today]
             df.loc[idx,:] = entry
 
 # Remove empty rows

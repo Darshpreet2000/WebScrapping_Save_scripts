@@ -9,6 +9,7 @@ import sys
 here = os.path.dirname(os.path.abspath(__file__))
 folder = os.path.basename(here)
 latest = '%s/latest' % here
+today = datetime.datetime.today().strftime('%Y-%m-%d')
 year = datetime.datetime.today().year
 output_data = os.path.join(here, 'data-latest.csv')
 
@@ -28,7 +29,8 @@ with open(results_json, 'r') as filey:
 
 columns = ['price', 
            'description',
-           'charge_type']
+           'charge_type',
+            'DateUpdated']
 
 df = pandas.DataFrame(columns=columns)
 
@@ -56,7 +58,7 @@ for result in results:
         entry = [          # charge code
                  row[1].CHARGE, # price
                  row[1].DESCRIPTION,
-                 'standard']
+                 'standard',today]
         df.loc[idx,:] = entry
 
 # Remove empty rows
