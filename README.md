@@ -5,7 +5,7 @@ The data folder contains all the hospital , In each Folder of hospital there are
 There are 3 python scripts 
  scrap.py
  
- This gets the file csv or xmlnx from that hospital website and save it to a folder latest
+ This gets the file csv or xlsx from that hospital website and save it to a folder latest
  
  parse.py
  
