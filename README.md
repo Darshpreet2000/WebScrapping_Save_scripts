@@ -19,4 +19,4 @@ AFTER THIS THERE IS ANOTHER SCRIPT
 
 runalll.py
 
-This executes each script in sequence scrap ,parse and then save for each hospital
+This executes each script in sequence scrap ,parse and then save for each hospital.I only need to execute this file in command line and it will do everything.
