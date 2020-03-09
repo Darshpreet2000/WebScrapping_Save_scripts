@@ -1,0 +1,18 @@
+[
+    {
+        "hospital_id": "cooper-university-hospital",
+        "filename": "Cooper-CM-List_2020.csv",
+        "date": "2020-03-06",
+        "uri": "Cooper-CM-List_2020.csv",
+        "name": "Cooper-CM-List_2020.csv",
+        "url": "https://www.cooperhealth.org/sites/default/files/financial/Cooper-CM-List_2020.csv"
+    },
+    {
+        "hospital_id": "cooper-university-hospital",
+        "filename": "DRG-Cooper-2019.csv",
+        "date": "2020-03-06",
+        "uri": "DRG-Cooper-2019.csv",
+        "name": "DRG-Cooper-2019.csv",
+        "url": "https://www.cooperhealth.org/sites/default/files/financial/DRG-Cooper-2019.csv"
+    }
+]
