@@ -16,5 +16,7 @@ There are 3 python scripts
  This saves that data-latest to my database
  
 AFTER THIS THERE IS ANOTHER SCRIPT
+
 runalll.py
+
 This executes each script in sequence scrap ,parse and then save for each hospital
